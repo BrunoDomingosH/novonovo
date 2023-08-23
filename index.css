@@ -1,0 +1,74 @@
+body {
+    background-color: whitesmoke;
+    background-clip: border-box;
+    background-size: 100%;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: center;
+    align-content: center;
+    align-items: center;    
+    display: flex;
+}
+
+.container {
+    position: relative;
+}
+
+@keyframes entrada {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* Estilo para o elemento que será animado */
+.jogador {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Começa invisível */
+    animation: entrada 5s ease-in-out; /* Duração da animação e tipo de transição */
+}
+
+
+
+.carregamento{
+    width: 20px;
+
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 8px solid rgb(255, 0, 0);
+    border-top: 8px solid transparent;
+    animation: loading 1s infinite linear;
+
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: center;
+    align-content: center;
+    align-items: center;    
+    display: flex;
+    margin-top: 480px;
+    
+
+}
+@keyframes loading{
+    0%{rotate: 0deg;}
+    100%{rotate: 360deg;}
+}
+
+.pontinho{
+    animation:flash infinite alternate 2s;
+    font-size: 50px;
+    
+}
